@@ -1,5 +1,70 @@
-.logo{
-    width: 10%;
+#homelogo{
+    width: 50%;
     height: auto;   
 }
 
+.logo{
+    width: 15%;
+    border-style: solid;
+}
+.navbar{
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    border-style: hidden hidden hidden hidden;
+}
+.navi{
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.navlink{
+    margin-right: 5%;
+    text-size-adjust: 1.25em;
+    border-style: solid;
+}
+
+#frontpage{
+    width: 50%;
+    height: auto;
+}
+
+.part2{
+    display: flex;
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.homemsg{
+    flex: 60%;
+    border-style: solid;
+    text-align: center;
+}
+
+.missionst{
+    font-size: 2em;
+    
+}
+.testimonials{
+    flex: 40%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.rvheading{
+    color: maroon;
+}
+.contacts{
+    display: flex;
+}
+/*
+#keepintouch{
+    padding-right: 5px;
+} */
+.social{
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+}
