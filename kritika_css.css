@@ -1,0 +1,129 @@
+
+/* General layout */
+body {background:#e0e0e0; color:#303030; font:76% tahoma, verdana, sans-serif; margin:0; padding:15px 0 0;}
+#container {background:#fff; margin:0 auto 20px; padding:5px 20px 20px; width:1024px;}
+
+
+/* Tags */
+a {border-bottom:1px dotted #505050; color:#303030; text-decoration:none;}
+a:hover {
+	border-bottom:1px solid #505050;
+	color:DeepSkyBlue;
+	text-decoration:none;
+}
+
+
+p {line-height:1.5em; margin:0 0 15px; text-align:left;}
+
+/* Navitabs menu */
+#navitabs {clear:both;}
+.navitab {background:#e0e0e0; border-bottom:1px solid #fff; border-left:1px solid #fff; font-size:1.1em; margin:0 0 4px; padding:4px 8px; text-decoration:none;}
+.navitab:hover {
+	background:#d0d0d0;
+	border-bottom:1px solid #fff;
+	text-decoration:none;
+}
+
+
+/* Main content */
+#main {border-right:1px solid #d8d8d8; float:left; margin:0; padding:0 15px 0 0; width:800px;}
+
+/* Sidebar */
+#sidebar {float:right; width:150px;}
+#sidebar p {font-size:0.9em; line-height:1.3em; margin:0 0 15px;}
+#sidebar ul {margin:0 0 15px 0; padding:0;}
+#sidebar li {list-style:none;}
+ul.sidelink li {list-style:none; margin:0 0 3px; padding:0;}
+ul.sidelink li a{background:#f0f0f0; border:none; display:block; margin:5px 10px 5px 0; padding:3px 4px 3px 8px; text-align:left; width:140px;}
+ul.sidelink li a:hover {background:#F0FFFF; border:none; text-decoration:none;}
+
+
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+
+ 
+
+
+/* Footer */
+#footer {background:#fff; border-top:1px solid #d8d8d8; clear:both; margin:0; padding:0;}
+#footer a {color:gray;}
+#footer a:hover {color:#303030;}
+#footer p {color:gray; font-size:1.1em; line-height:1.3em; margin:15px 0 0; padding:0;}
+
+.hide {display:none;}
+
+
+.fname {
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	color:#008000;
+	
+}
+name {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color:#008000;
+}
+
+
+.linkcolor {
+	color:#03F;
+}
+
+.naviname {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color:#008080;
+}
