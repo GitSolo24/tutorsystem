@@ -1,0 +1,300 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 08, 2022 at 05:04 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `online_tutor`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat_message`
+--
+
+CREATE TABLE `chat_message` (
+  `chat_message_id` int(11) NOT NULL,
+  `to_user_id` int(11) NOT NULL,
+  `from_user_id` int(11) NOT NULL,
+  `chat_message` mediumtext COLLATE utf8mb4_bin NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Dumping data for table `chat_message`
+--
+
+INSERT INTO `chat_message` (`chat_message_id`, `to_user_id`, `from_user_id`, `chat_message`, `timestamp`, `status`) VALUES
+(1, 1, 4, 'a', '2022-03-29 23:20:41', 1),
+(2, 1, 6, 'Hello', '2022-03-29 23:24:54', 2),
+(3, 4, 6, 'Hello!', '2022-03-29 23:25:36', 0),
+(4, 6, 4, 'Whats Up', '2022-03-29 23:25:46', 0),
+(5, 0, 4, '!!', '2022-03-29 23:29:48', 1),
+(6, 0, 2, '!!!', '2022-03-29 23:29:50', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE `course` (
+  `CID` int(11) NOT NULL,
+  `CNAME` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`CID`, `CNAME`) VALUES
+(101, 'Algebra'),
+(102, 'Arithmetic'),
+(103, 'Trignometery'),
+(104, 'Geometry'),
+(105, 'Ancient History'),
+(106, 'Medieval History'),
+(107, 'Modern History'),
+(108, 'Geography'),
+(109, 'Economics'),
+(110, 'Physics'),
+(111, 'Biology'),
+(112, 'Chemistry');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `start_event` datetime NOT NULL,
+  `end_event` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `start_event`, `end_event`) VALUES
+(1, 'Meeting with Professor', '2022-04-05 02:30:00', '2022-04-05 08:00:00'),
+(7, 'Talk with Prof', '2022-04-07 09:30:00', '2022-04-07 12:30:00'),
+(8, 'talk', '2022-04-10 08:00:00', '2022-04-10 09:30:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`user_id`, `username`, `password`) VALUES
+(1, 'johnsmith', '$2y$10$4REfvTZpxLgkAR/lKG9QiOkSdahOYIR3MeoGJAyiWmRkEFfjH3396'),
+(2, 'peterParker', '$2y$10$4REfvTZpxLgkAR/lKG9QiOkSdahOYIR3MeoGJAyiWmRkEFfjH3396'),
+(3, 'davidMoore', '$2y$10$4REfvTZpxLgkAR/lKG9QiOkSdahOYIR3MeoGJAyiWmRkEFfjH3396'),
+(4, 'adesolah', '$2y$10$86syAnAQ/vPq8o4KYdkvN.CxHznln2J6qPhnRgiKxqZkJXhBm6rJC'),
+(5, 'Solomon', '$2y$10$lW8m0JjFU.tMkYxUv/PFNuC7VmT3zj2bd2NPBFPWJX42LSW2Bxjs.'),
+(6, 'JWong', '$2y$10$7PyYcIlqtTUG.QIfkSfac.rRAN.lM9QZ3QzhDnAK3KKL3jnUsmPIS');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login_details`
+--
+
+CREATE TABLE `login_details` (
+  `login_details_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_activity` timestamp NOT NULL DEFAULT current_timestamp(),
+  `is_type` enum('no','yes') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login_details`
+--
+
+INSERT INTO `login_details` (`login_details_id`, `user_id`, `last_activity`, `is_type`) VALUES
+(1, 4, '2022-03-29 23:10:48', 'no'),
+(2, 5, '2022-03-29 23:15:02', 'no'),
+(3, 1, '2022-03-29 23:15:01', 'yes'),
+(4, 4, '2022-03-29 23:20:48', 'no'),
+(5, 6, '2022-03-29 23:26:22', 'no'),
+(6, 4, '2022-03-29 23:26:24', 'no'),
+(7, 4, '2022-04-02 14:03:58', 'no'),
+(8, 2, '2022-03-29 23:33:38', 'no'),
+(9, 1, '2022-04-05 04:54:08', 'no');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE `student` (
+  `SID` int(10) NOT NULL,
+  `SUSERNAME` varchar(50) NOT NULL,
+  `SFIRSTNAME` varchar(50) NOT NULL,
+  `SLASTNAME` varchar(50) NOT NULL,
+  `SPASSWORD` varchar(50) NOT NULL,
+  `CID` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`SID`, `SUSERNAME`, `SFIRSTNAME`, `SLASTNAME`, `SPASSWORD`, `CID`) VALUES
+(102, 'AHaastrup', 'Adesola', 'Haastrup', '123456', 225),
+(109, 'KritikaS', 'Kritika', 'Singh', '123456', 110),
+(1001, 'TVance', 'Tim', 'Vance', '123456', 101),
+(1002, 'JLamb', 'Jesse', 'Lamb', '123456', 112),
+(1003, 'MKong', 'Maria', 'Kong', '123456', 108),
+(1004, 'APandey', 'Atiksh', 'Pandey', '123456', 108),
+(1005, 'BLee', 'Bob', 'Lee', '123456', 102),
+(1006, 'DLee', 'Debi', 'Lee', '123456', 110),
+(1007, 'DFrancis', 'DeAndre', 'Francis', '123456', 109),
+(1008, 'AWard', 'Allen ', 'Ward', '123456', 109);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tutor`
+--
+
+CREATE TABLE `tutor` (
+  `TID` int(11) NOT NULL,
+  `TUSERNAME` varchar(50) NOT NULL,
+  `TFIRSTNAME` varchar(50) NOT NULL,
+  `TLASTNAME` varchar(50) NOT NULL,
+  `TPASSWORD` varchar(50) NOT NULL,
+  `CID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tutor`
+--
+
+INSERT INTO `tutor` (`TID`, `TUSERNAME`, `TFIRSTNAME`, `TLASTNAME`, `TPASSWORD`, `CID`) VALUES
+(122, 'SLop', 'Solo', 'Lop', '41526', 333),
+(2001, 'SLee', 'Shane', 'Lee', '123456', 101),
+(2001, 'SLee', 'Shane', 'Lee', '123456', 102),
+(2001, 'SLee', 'Shane', 'Lee', '123456', 103),
+(2002, 'MJefferson', 'Mary', 'Jefferson', '123456', 104),
+(2003, 'LKim', 'Li', 'Kim', '123456', 105),
+(2003, 'LKim', 'Li', 'Kim', '123456', 106),
+(2004, 'JSpivey', 'Janet', 'Spivey', '123456', 107),
+(2005, 'DBrown', 'David', 'Brown', '123456', 108),
+(2006, 'FJacob', 'Frenando', 'Jacob', '123456', 109),
+(2007, 'RJames', 'Russell', 'James', '123456', 110),
+(2008, 'FFarooq', 'Faisal', 'Farooq', '123456', 111),
+(2009, 'DMerchant', 'Dan', 'Merchant', '123456', 112),
+(2010, 'LAlvergue', 'Luis', 'Alvergue', '123456', 110),
+(2011, 'BFox', 'Brian', 'Fox', '123456', 105),
+(2011, 'JennyW', 'Jenny', 'William', '123456', 110),
+(2013, 'MarkW', 'Mark ', 'William', '123456', 113);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  ADD PRIMARY KEY (`chat_message_id`);
+
+--
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`CID`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `login_details`
+--
+ALTER TABLE `login_details`
+  ADD PRIMARY KEY (`login_details_id`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`SID`,`CID`);
+
+--
+-- Indexes for table `tutor`
+--
+ALTER TABLE `tutor`
+  ADD PRIMARY KEY (`TID`,`CID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  MODIFY `chat_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `login_details`
+--
+ALTER TABLE `login_details`
+  MODIFY `login_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
