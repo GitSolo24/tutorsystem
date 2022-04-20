@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="keywords" content="Tutor Finder, Courses" />
+	<link rel="stylesheet" type="text/css" href="kritika_css.css" media="screen,projection" />
+	<title>Inter-School Tutoring System </title>
+	
+	<style>
+	
+	
+input[type=text]{ 
+
+width: 80%; 
+
+margin-bottom: 10px; 
+
+padding:10px; 
+
+} 
+
+ 
+ 
+
+input[type=password]{ 
+
+width:80%; 
+
+margin-bottom: 10px; 
+
+padding: 10px; 
+
+} 
+
+ 
+ 
+
+.button{ 
+
+width: 80%; 
+
+} 
+
+ 
+ 
+
+button[type=submit]{ 
+
+width: 85%; 
+
+padding: 10px; 
+
+border-radius: 5px; 
+
+} 
+	
+	</style>
+</head>
+
+
+
+<body>
+<div id="container">
+
+
+<div id="logo">
+ <p>
+ 
+</p>
+
+</div>
+
+
+<div id="navitabs">
+  <h2 class="hide">Sample navigation menu:</h2>
+  <p><img src="images/logo2.png" width="150" height="120" alt="logo" /> 
+	<img src="images/background2.jpg" width="860" height="120" /> 
+  </p>
+   
+<div class="dropdown">
+  <button class="dropbtn"><a href="index.html">Home</a></button>
+ </div>   
+		
+ <div class="dropdown">
+  <button class="dropbtn">Find Tutors</button>
+  <div class="dropdown-content">
+    <a href="course_catalog.html">Course Catalog</a>
+    <a href="FindTutors.html">Find Tutor</a>
+   </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Student Dashboard</button>
+  <div class="dropdown-content">
+    <a href="Student.html">Log In</a>
+    <a href="RequestTutor.html">Request A Tutor</a>
+  </div>
+</div>
+	
+ <div class="dropdown">
+  <button class="dropbtn">Tutor Dashboard</button>
+  <div class="dropdown-content">
+    <a href="Tutor.html">Log In</a>
+    <a href="AboutTutor.html">About Tutor Jobs</a>
+    <a href="FindTutoringJobs.html">Find Tutoring Jobs</a>
+  </div>
+</div>
+
+ <div class="dropdown">
+  <button class="dropbtn">About Us</button>
+  <div class="dropdown-content">
+  	<a href="Carrers.html">Carrers</a>
+    <a href="ContactUs.html">Contact Us</a>
+  </div>
+</div> 
+   
+</div>
+
+<div id="main">
+
+			<p>
+			<img src="images/background1.jpg" width="800" height="10" /> 
+			</p>
+			
+			<p>
+				<img src="images/pic6.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic5.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic4.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic1.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic2.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic6.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic5.jpg" width="106" height="120" alt="" /> 
+			</p>
+
+		 <table width="558" border="0" cellpadding="1">
+	  	    <tr>
+	  	    <td>
+			
+	<!-- Code Kritika 		
+			<center> 
+                <div>
+                    <h2> Returning Student - Login Here </h2>
+                    <form action="Svalidation.php" method="post">
+                        <div class="form-group">
+                            <label>Student Username</label>
+                            <input type="text" name="SUSERNAME" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="password" name="SPASSWORD" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div></center> 
+			
+			
+			<center>    <div>
+                    <h2> New Student Registration</h2>
+					
+                    <form action="SRegistration.php" method="post">
+					<h3> Note: Contact Inter-School Online Tutoring Admin for Student ID. </h3>
+						<div class="form-group">
+                            <label>Student ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" name="SID" class="form-control" required>
+							
+                        </div>
+                        <div class="form-group">
+                            <label>Student Username&nbsp;</label>
+                            <input type="text" name="SUSERNAME" class="form-control" required>
+                        </div>
+						<div class="form-group">
+                            <label>Student First Name</label>
+                            <input type="text" name="SFIRSTNAME" class="form-control" required>
+                        </div>
+						<div class="form-group">
+                            <label>Student Last Name </label>
+                            <input type="text" name="SLASTNAME" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="password" name="SPASSWORD" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Course ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" name="CID" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                    </div></center>
+            </div>  -->
+			
+<!-- Code Solomon  -->
+<center> 
+<div class="form-group"> 
+
+<h2> Returning Student - Login Here </h2> 
+
+<form action="Svalidation.php" method="post">  
+
+<input type="text" name="SUSERNAME" class="form-control" placeholder="Student Username" required> <br> 
+
+<input type="password" name="SPASSWORD" class="form-control" placeholder="Password" required><br> 
+
+<button type="submit" class="btn btn-primary">Login</button> 
+
+</form> 
+
+</div></center>  	
+
+<center> <div> 
+<h2> New Student Registration</h2> 
+
+<form action="SRegistration.php" method="post"> 
+
+<h3> Note: Contact Inter-School Online Tutoring Admin for Student ID </h3> 
+
+<div class="form-group"> 
+
+<input type="text" name="SID" class="form-control" placeholder="Student ID" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SUSERNAME" class="form-control" placeholder="Student Username" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SFIRSTNAME" class="form-control" placeholder="First Name " required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SLASTNAME" class="form-control" placeholder="Last Name" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="password" name="SPASSWORD" class="form-control" placeholder="Password" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="CID" class="form-control" placeholder="Course ID" required> 
+
+</div> 
+
+<button type="submit" class="btn btn-primary">Register</button> 
+
+</form> 
+
+</div></center> 
+
+<br>
+
+</div> 	
+			
+			
+			</td>
+  	        </tr>
+            </table>
+
+			<p>
+			<img src="images/background1.jpg" width="800" height="10" /> 
+			</p>
+
+		      </td>
+  	           </tr>
+                 </table>
+				 
+				 
+				 <table width="800" border="0" cellpadding="1">
+	  	    <tr>
+	  	      <td width="442" align="top" ><h2 class="fname"><b>Follow Inter-School Online Tutoring</b></h2><br/>
+                      <a href="https://www.facebook.com/foreverbeautiful2020" target="_blank">
+                      <img src="images/sn-facebook.png" width="40" height="40" alt="" /></a>&nbsp;&nbsp;&nbsp;&nbsp
+                      <a href="https://www.instagram.com/foreverbeautiful_2020/" target="_blank">
+                     <img src="images/sn-instagram.png" width="40" height="40" alt="" /></a>&nbsp;&nbsp;&nbsp;&nbsp
+                     <a href="https://www.youtube.com/channel/UC7cPluS4L-3WX7fuxj2BsvA" target="_blank">
+                     <img src="images/sn-youtube.png" width="40" height="40" alt="" /></a>
+                    </td>
+  	            </tr>
+                   </table>
+				   
+				</p>   
+				    <tr>
+	  	      <td>
+                     <img src="images/background2.jpg" width="1010" height="120" /> 
+				</p>
+                    </td>
+  	            </tr>
+                   </table>
+				   
+				   
+				   
+				   
+</div>
+
+<div id="sidebar">
+<!--<p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/logo1.png" width="106" height="120" alt="logo" /> 
+</p>-->
+    
+<h3 class="fname">News and Events:</h3>
+	  <ul class="sidelink">
+      	    <li ><a href="https://www.insidehighered.com/news/2021/03/16/face-face-peer-tutoring-decimated-pandemic-universities-turn-new-tools-times-and" class="linkcolor" target="_blank">As Students Dispersed, Tutoring Services Adapted</a></li>
+	    <li><a href="https://www.edsurge.com/news/2020-07-31-to-combat-the-covid-slide-tutoring-program-pairs-elementary-schoolers-with-college-students" target="_blank" class="linkcolor">To Combat the COVID Slide - Tutoring Program Pairs Elementary Schoolers with College Students</a></li>
+        </ul>
+
+<h3 class="fname">Collaboration:</h3>
+	  <ul class="sidelink">
+	    <li><a href="https://www.tutor.com/" target="_blank" class="linkcolor">&nbsp;Tutor.com</a></li>
+	    <li><a href="https://www.pvamu.edu/" target="_blank" class="linkcolor">Prairie View A&M University</a></li>
+	    <li><a href="https://www.varsitytutors.com/tutoring-houston" target="_blank" class="linkcolor">Varsity Tutors</a></li>
+	  </ul>
+ </div>
+
+	
+    
+<div id="footer">
+    <tr>
+     <td align="top" width="675"> <img src="images/footerline.gif" width=720 height=50 border="0" alt="footer"/></td>
+    </tr>
+
+    <tr>
+      <td colspan="3" align="center" class="footer"><br /> Copyright &copy; 2022. All Rights Reserved.  Inter-School Tutoring System. 
+      </td>
+    </tr>
+          
+  </div>
+
+
+</div>
+</body>
+</html>
