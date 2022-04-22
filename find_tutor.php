@@ -3,7 +3,11 @@
 <head>
 	<meta name="keywords" content="Tutor Finder, Courses" />
 	<link rel="stylesheet" type="text/css" href="kritika_css.css" media="screen,projection" />
+<<<<<<< HEAD
 	<title>Houston Online Tutors - Tutor Results  </title>
+=======
+	<title>Inter-School Tutoring System - Tutor Results  </title>
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
 </head>
 
 <body>
@@ -14,11 +18,14 @@
 <div id="logo">
  <p>
  
+<<<<<<< HEAD
  <!--<h2 class="fname"> Houston Online Tutors - Convenient Online Sessions</h2>-->
  
  
 <!--  <img src="images/logo.jpg" alt="logo" width="731" height="146" align="left" /></a>  -->
 
+=======
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
 </p>
 
 </div>
@@ -26,6 +33,7 @@
 
 <div id="navitabs">
   <h2 class="hide">Sample navigation menu:</h2>
+<<<<<<< HEAD
   <p><img src="images/logo1.png" width="106" height="120" alt="logo" />
   <br />
     <a class="navitab" href="index.html"><b class="naviname">Home</b></a><span class="hide"> | </span> 
@@ -35,11 +43,73 @@
     <a class="navitab" href="contactus.html"><b class="naviname">Contact Us</b></a>
   </p>
    
+=======
+  <p><img src="images/logo2.png" width="150" height="120" alt="logo" /> 
+	<img src="images/background2.jpg" width="860" height="120" /> 
+  </p>
+   
+<div class="dropdown">
+  <button class="dropbtn"><a href="index.html">Home</a></button>
+ </div>   
+		
+ <div class="dropdown">
+  <button class="dropbtn">Find Tutors</button>
+  <div class="dropdown-content">
+    <a href="course_catalog.html">Course Catalog</a>
+    <a href="FindTutors.html">Find Tutor</a>
+   </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Student Dashboard</button>
+  <div class="dropdown-content">
+    <a href="Student.html">Log In</a>
+    <a href="RequestTutor.html">Request A Tutor</a>
+  </div>
+</div>
+	
+ <div class="dropdown">
+  <button class="dropbtn">Tutor Dashboard</button>
+  <div class="dropdown-content">
+    <a href="Tutor.html">Log In</a>
+    <a href="AboutTutor.html">About Tutor Jobs</a>
+    <a href="FindTutoringJobs.html">Find Tutoring Jobs</a>
+  </div>
+</div>
+
+ <div class="dropdown">
+  <button class="dropbtn">About Us</button>
+  <div class="dropdown-content">
+  	<a href="Carrers.html">Carrers</a>
+    <a href="ContactUs.html">Contact Us</a>
+  </div>
+</div> 
+   
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
 </div>
 
 
 
+<<<<<<< HEAD
 <div id="main">
+=======
+
+<div id="main">
+
+	<p>
+			<img src="images/background1.jpg" width="800" height="10" /> 
+			</p>
+			
+			<p>
+				<img src="images/pic6.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic5.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic4.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic1.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic2.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic6.jpg" width="106" height="120" alt="" /> 
+				<img src="images/pic5.jpg" width="106" height="120" alt="" /> 
+			</p>
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
 			<table width="558" border="0" cellpadding="1">
 	  	    <tr>
 	  	      <td width="442" align="top" ><h2 class="fname"><b>Tutor results are listed below </b></h2>
@@ -68,9 +138,46 @@ while ($row = mysqli_fetch_array($ret)){
   
  ?>
 
+<<<<<<< HEAD
 </td>
 </tr>
 </table>			
+=======
+
+<p>
+			<img src="images/background1.jpg" width="800" height="10" /> 
+			</p>
+</td>
+</tr>
+
+
+</table>
+
+
+ 
+				 <table width="800" border="0" cellpadding="1">
+	  	    <tr>
+	  	      <td width="442" align="top" ><h2 class="fname"><b>Follow Inter-School Online Tutoring</b></h2><br/>
+                      <a href="https://www.facebook.com/foreverbeautiful2020" target="_blank">
+                      <img src="images/sn-facebook.png" width="40" height="40" alt="" /></a>&nbsp;&nbsp;&nbsp;&nbsp
+                      <a href="https://www.instagram.com/foreverbeautiful_2020/" target="_blank">
+                     <img src="images/sn-instagram.png" width="40" height="40" alt="" /></a>&nbsp;&nbsp;&nbsp;&nbsp
+                     <a href="https://www.youtube.com/channel/UC7cPluS4L-3WX7fuxj2BsvA" target="_blank">
+                     <img src="images/sn-youtube.png" width="40" height="40" alt="" /></a>
+                    </td>
+  	            </tr>
+                   </table>
+				   
+				</p>   
+				    <tr>
+	  	      <td>
+                     <img src="images/background2.jpg" width="1010" height="120" /> 
+				</p>
+                    </td>
+  	            </tr>
+                   </table>
+				   			
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
 </div>
 
 
@@ -102,7 +209,11 @@ while ($row = mysqli_fetch_array($ret)){
     </tr>
 
     <tr>
+<<<<<<< HEAD
       <td colspan="3" align="center" class="footer"><br /> Copyright &copy; 2021. All Rights Reserved.  Houston Online Tutors. 
+=======
+      <td colspan="3" align="center" class="footer"><br /> Copyright &copy; 2022. All Rights Reserved.  Houston Online Tutors. 
+>>>>>>> 641bbdcdacad95f98de297a6d860f6cfa028c762
       </td>
     </tr>
           
