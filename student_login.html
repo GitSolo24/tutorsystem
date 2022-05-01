@@ -4,6 +4,56 @@
 	<meta name="keywords" content="Tutor Finder, Courses" />
 	<link rel="stylesheet" type="text/css" href="kritika_css.css" media="screen,projection" />
 	<title>Inter-School Tutoring System </title>
+	
+	<style>
+	
+	
+input[type=text]{ 
+
+width: 80%; 
+
+margin-bottom: 10px; 
+
+padding:10px; 
+
+} 
+
+ 
+ 
+
+input[type=password]{ 
+
+width:80%; 
+
+margin-bottom: 10px; 
+
+padding: 10px; 
+
+} 
+
+ 
+ 
+
+.button{ 
+
+width: 80%; 
+
+} 
+
+ 
+ 
+
+button[type=submit]{ 
+
+width: 85%; 
+
+padding: 10px; 
+
+border-radius: 5px; 
+
+} 
+	
+	</style>
 </head>
 
 
@@ -85,7 +135,7 @@
 	  	    <tr>
 	  	    <td>
 			
-			
+	<!-- Code Kritika 		
 			<center> 
                 <div>
                     <h2> Returning Student - Login Here </h2>
@@ -136,9 +186,78 @@
                         <button type="submit" class="btn btn-primary">Register</button>
                     </form>
                     </div></center>
-            </div>
+            </div>  -->
 			
-			
+<!-- Code Solomon  -->
+<center> 
+<div class="form-group"> 
+
+<h2> Returning Student - Login Here </h2> 
+
+<form action="Svalidation.php" method="post">  
+
+<input type="text" name="SUSERNAME" class="form-control" placeholder="Student Username" required> <br> 
+
+<input type="password" name="SPASSWORD" class="form-control" placeholder="Password" required><br> 
+
+<button type="submit" class="btn btn-primary">Login</button> 
+
+</form> 
+
+</div></center>  	
+
+<center> <div> 
+<h2> New Student Registration</h2> 
+
+<form action="SRegistration.php" method="post"> 
+
+<h3> Note: Contact Inter-School Online Tutoring Admin for Student ID </h3> 
+
+<div class="form-group"> 
+
+<input type="text" name="SID" class="form-control" placeholder="Student ID" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SUSERNAME" class="form-control" placeholder="Student Username" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SFIRSTNAME" class="form-control" placeholder="First Name " required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="SLASTNAME" class="form-control" placeholder="Last Name" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="password" name="SPASSWORD" class="form-control" placeholder="Password" required> 
+
+</div> 
+
+<div class="form-group"> 
+
+<input type="text" name="CID" class="form-control" placeholder="Course ID" required> 
+
+</div> 
+
+<button type="submit" class="btn btn-primary">Register</button> 
+
+</form> 
+
+</div></center> 
+
+<br>
+
+</div> 	
 			
 			
 			</td>

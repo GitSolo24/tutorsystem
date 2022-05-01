@@ -4,6 +4,54 @@
 	<meta name="keywords" content="Tutor Finder, Courses" />
 	<link rel="stylesheet" type="text/css" href="kritika_css.css" media="screen,projection" />
 	<title>Inter-School Tutoring System </title>
+	 <style>
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            border: 1px solid BLACK;
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 0px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .chat,
+        .calendar {
+            margin: 0;
+            padding: 0;
+            position: center;
+            border: 3px solid #800020;
+
+        }
+
+        .h2,
+        .h3 {
+            float: center;
+        }
+    </style>
 </head>
 
 
@@ -83,7 +131,7 @@
 
 		<table width="558" border="0" cellpadding="1">
 	  	    <tr>
-	  	      <td width="442" align="top" ><h2 class="fname"><b>Student Appointments </b></h2>
+	  	      <td width="442" align="top" ><h2 class="fname"><b>MyAppointments </b></h2>
               </td>
 			</tr>
 			</table>
@@ -101,21 +149,30 @@
 			<a href="student_dashboard.html">Home</a>
 			</button>
 	  	    </p>			
-			<tr>
-			<td>
 			
-			</td>
-			<td>
-			<iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showDate=0&showTitle=0&src=a3JpdHNpbmdoMzFAZ21haWwuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043" style="border:solid 1px #777" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-			</td>
-			</tr>
 
 			</td>
   	        </tr>
             </table>
  
 
- 
+ <table width="558" border="0" cellpadding="1">
+                <tr>
+                    <td>
+                        <!-- adding to the home page-->
+                        <div class="row">
+
+                            <div class="column">
+                                <h2> MYAppointments </h2>
+                                <div class="calendar">
+                                    <h3><a href="calendarindex.php"> SCHEDULE YOUR MEETING </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+</table>
  
 			
 			
