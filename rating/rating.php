@@ -1,95 +1,96 @@
-<!DOCTYPE html>
+<?php
 
-<head>
-	<meta name="keywords" content="Tutor Finder, Courses" />
+error_reporting(0);
+
+require_once("Rate.php");
+$rate = new Rate();
+$result = $rate->getAllPost();
+?>
+<HTML>
+<HEAD>
+
+
+<meta name="keywords" content="Tutor Finder, Courses" />
 	<link rel="stylesheet" type="text/css" href="kritika_css.css" media="screen,projection" />
 	<title>Inter-School Tutoring System </title>
 	
-	<style>
-	
-	
-input[type=text]{ 
+<style>
+body{width:610;}
+.demo-table {width: 100%;border-spacing: initial;margin: 20px 0px;word-break: break-word;table-layout: auto;line-height:1.8em;color:#333;}
+.demo-table th {background: #999;padding: 5px;text-align: left;color:#FFF;}
+.demo-table td {border-bottom: #f0f0f0 1px solid;background-color: #ffffff;padding: 5px;}
+.demo-table td div.feed_title{text-decoration: none;color:#00d4ff;font-weight:bold;}
+.demo-table ul{margin:0;padding:0;}
+.demo-table li{cursor:pointer;list-style-type: none;display: inline-block;color: #F0F0F0;text-shadow: 0 0 1px #666666;font-size:20px;}
+.demo-table .highlight, .demo-table .selected {color:#F4B30A;text-shadow: 0 0 1px #F48F0A;}
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>function highlightStar(obj,id) {
+	removeHighlight(id);		
+	$('.demo-table #tutorial-'+id+' li').each(function(index) {
+		$(this).addClass('highlight');
+		if(index == $('.demo-table #tutorial-'+id+' li').index(obj)) {
+			return false;	
+		}
+	});
+}
 
-width: 80%; 
+function removeHighlight(id) {
+	$('.demo-table #tutorial-'+id+' li').removeClass('selected');
+	$('.demo-table #tutorial-'+id+' li').removeClass('highlight');
+}
 
-margin-bottom: 10px; 
+function addRating(obj,id) {
+	$('.demo-table #tutorial-'+id+' li').each(function(index) {
+		$(this).addClass('selected');
+		$('#tutorial-'+id+' #rating').val((index+1));
+		if(index == $('.demo-table #tutorial-'+id+' li').index(obj)) {
+			return false;	
+		}
+	});
+	$.ajax({
+	url: "add_rating.php",
+	data:'id='+id+'&rating='+$('#tutorial-'+id+' #rating').val(),
+	type: "POST"
+	});
+}
 
-padding:10px; 
+function resetRating(id) {
+	if($('#tutorial-'+id+' #rating').val() != 0) {
+		$('.demo-table #tutorial-'+id+' li').each(function(index) {
+			$(this).addClass('selected');
+			if((index+1) == $('#tutorial-'+id+' #rating').val()) {
+				return false;	
+			}
+		});
+	}
+} </script>
 
-} 
-
-input[type=email]{ 
-
-width: 80%; 
-
-margin-bottom: 10px; 
-
-padding:10px; 
-
-} 
-
+</HEAD>
 
 
-input[type=password]{ 
-
-width:80%; 
-
-margin-bottom: 10px; 
-
-padding: 10px; 
-
-} 
-
- 
- 
-
-.button{ 
-
-width: 80%; 
-
-} 
-
- 
- 
-
-button[type=submit]{ 
-
-width: 85%; 
-
-padding: 10px; 
-
-border-radius: 5px; 
-
-} 
-	
-	</style>
-</head>
+<BODY>
 
 
 
-<body>
+
 <div id="container">
 
 
 <div id="logo">
  <p>
  
- <!--<h2 class="fname"> Houston Online Tutors - Convenient Online Sessions</h2>-->
- 
- 
-<!--  <img src="images/logo.jpg" alt="logo" width="731" height="146" align="left" /></a>  -->
-
 </p>
 
 </div>
+
 
 <div id="navitabs">
   <h2 class="hide">Sample navigation menu:</h2>
   <p><img src="images/logo2.png" width="150" height="120" alt="logo" /> 
 	<img src="images/background2.jpg" width="860" height="120" /> 
   </p>
-
-
+   
 <div class="dropdown">
   <button class="dropbtn"><a href="index.html">Home</a></button>
  </div>   
@@ -129,7 +130,6 @@ border-radius: 5px;
    
 </div>
 
-
 <div id="main">
 
 			<p>
@@ -145,127 +145,84 @@ border-radius: 5px;
 				<img src="images/pic6.jpg" width="106" height="120" alt="" /> 
 				<img src="images/pic5.jpg" width="106" height="120" alt="" /> 
 			</p>
-	  	   <table width="558" border="0" cellpadding="1">
-	  	    <tr>
-	  	      <td width="442" align="top" ><h2 class="fname"><b>Contact Inter-School Tutoring System </b></h2>
-                      </td>
-	  	      <td width="106">&nbsp;</td>
-  	            </tr>
-                   </table>
 
-	  	 <table width="558" border="0" cellpadding="1">
-		 
-		 <tr>
-			<td>
-			<p >
-			<img src="images/president.jpg" width="106" height="120" alt="president" /> 
-	  	    </p>
-			</td>
-			<td>
-			<p>
-			<b>Name:</b> Kritika Singh <br/>
-			<b>Title: </b> President<br/>
-			<b>Email:</b> KSingh@IStutors.com<br/>
-			<b>Contact Number:</b> (832) 489 6500<br/>
-			<b>Address:</b> 2800 Prairie View TX 77446&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-            </p>
-			</td>
-		</tr>
-		 
-		 <tr>
-			<td>
-			<p >
-			<img src="images/vp.jpg" width="106" height="120" alt="a1" /> 
-	  	    </p>
-			</td>
-			<td>
-			<p>
-			<b>Name:</b> Adesola Haastrup <br/>
-			<b>Title: </b> Vice President<br/>
-			<b>Email:</b> JRobertson@IStutors.com<br/>
-			<b>Contact Number:</b> (832) 489 6501<br/>
-			
-            </p>
-			</td>
-		</tr>
-		 
-		 <tr>
-			<td>
-			<p >
-			<img src="images/p.jpg" width="106" height="120" alt="a2" /> 
-	  	    </p>
-			</td>
-			<td>
-			<p>
-			<b>Name:</b> Solomon Ugbane <br/>
-			<b>Title: </b> Principal <br/>
-			<b>Email:</b> AStewart@IStutors.com<br/>
-			<b>Contact Number:</b> (832) 489 6502<br/>
-			
-            </p>
-			</td>
-		</tr>
-		 
+		<table width="558" border="0" cellpadding="1">
 	  	    <tr>
+	  	      <td width="442" align="top" ><h2 class="fname"><b>Student Dashboard </b></h2>
+              </td>
+			</tr>
+			</table>
+
+
+
+
+
+	  	    <table width="558" border="0" cellpadding="1">
+	  	    <tr>
+	  	    <td>
+			
+						
+			<tr>
 			<td>
 			<p >
-			<img src="images/a3.jfif" width="106" height="120" alt="a3" /> 
+			<button>
+			Home
+			</button>
 	  	    </p>
 			</td>
-			<td>
-			<p>
-			<b>Name:</b> Jackie Roy <br/>
-			<b>Title: </b> Admin, Accountant  <br/>
-			<b>Email:</b> JRoy@IStutors.com<br/>
-			<b>Contact Number:</b> (832) 489 6503<br/>
+			</tr>
 			
-            </p>
+	
+			
 			</td>
-		</tr>
+  	        </tr>
+            </table>
 			
-		   
+			<table class="demo-table">
+<tbody>
+<tr>
+<th><strong>RateMYTutor </strong></th>
+</tr>
+<?php
+if(!empty($result)) {
+$i=0;
+foreach ($result as $tutorial) {
+?>
+<tr>
+<td valign="top">
+<div class="feed_title"><?php echo $tutorial["title"]; ?></div>
+<div id="tutorial-<?php echo $tutorial["id"]; ?>">
+<input type="hidden" name="rating" id="rating" value="<?php echo $tutorial["rating"]; ?>" />
+<ul onMouseOut="resetRating(<?php echo $tutorial["id"]; ?>);">
+  <?php
+  for($i=1;$i<=5;$i++) {
+  $selected = "";
+  if(!empty($tutorial["rating"]) && $i<=$tutorial["rating"]) {
+	$selected = "selected";
+  }
+  ?>
+  <li class='<?php echo $selected; ?>' onmouseover="highlightStar(this,<?php echo $tutorial["id"]; ?>);" onmouseout="removeHighlight(<?php echo $tutorial["id"]; ?>);" onClick="addRating(this,<?php echo $tutorial["id"]; ?>);">&#9733;</li>  
+  <?php }  ?>
+<ul>
+</div>
+<div><?php echo $tutorial["description"]; ?></div>
+</td>
+</tr>
+<?php		
+}
+}
+?>
+</tbody>
+</table>
+
+			<p>
+			<img src="images/background1.jpg" width="800" height="10" /> 
+			</p>
 
 		      </td>
   	           </tr>
                  </table>
 				 
-				 
-				 <table width="558" border="0" cellpadding="1">
-	  	    <tr>
-	  	      <td width="442" align="top" ><h2 class="fname"><b>Connect with Inter-School Tutoring Support Desk	  </b></h2>
-              </td>
-			</tr>
-			</table>
-		
-			
-			
-
-			<form method="post" action="send_mail1.php">
-			<p>
-			<label>
-			<input type="text" name="first_name" placeholder="Name" required>
-			</label> 
-			</p>
-			<p>
-			<label>
-			<input type="email" name="email_address" placeholder="Email Address">
-			</label>
-			</p>
-			<p>
-			<label>
-			<textarea type="comments" rows="20" cols="100" name="comments" maxlength="50000" placeholder="Compose Email"></textarea>
-			</label>
-			</p>
-			<p><button>Send Email</button></p>
-			</form>
-			
-			</td>
-  	        </tr>
-            </table>
-				 
-				   <p>
-			<img src="images/background1.jpg" width="800" height="10" /> 
-			</p>
 				 
 				 <table width="800" border="0" cellpadding="1">
 	  	    <tr>
@@ -288,6 +245,10 @@ border-radius: 5px;
                     </td>
   	            </tr>
                    </table>
+				   
+				   
+				   
+				   
 </div>
 
 <div id="sidebar">
@@ -324,5 +285,6 @@ border-radius: 5px;
 
 
 </div>
-</body>
-</html>
+
+</BODY>
+</HTML>
